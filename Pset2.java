@@ -14,27 +14,27 @@ class Pset2{
 		System.out.println(nstudents + " students are in our class");
 
 		if (nstudents >4){
-			System.out.println("class is canceled");
+			System.out.println("class will continue");
 		} 
 		else {
-			System.out.println("class will continue");
+			System.out.println("class is canceled");
 		}
 
 		int charfirst = 4;
 		nstudents -= charfirst;
 		if (nstudents >4){
-			System.out.println("class is canceled");
+			System.out.println("class will continue");
 		} 
 		else {
-			System.out.println("class will continue");
+			System.out.println("class is canceled");
 		}
 
-		boolean threegroups = (nstudents % 3 = 0)
+		boolean threegroups = (nstudents % 3 == 0);
 		if (threegroups) {
-			System.out.println(threegroups + " groups of " + (number_students/3) +" are created");
+			System.out.println(threegroups + " groups of " + (nstudents/3) +" are created");
 		} 
 		else {
-			System.out.println((3 - (number_students % 3)) + "students are required to be divided");
+			System.out.println((3 - (nstudents % 3)) + "students are required to be divided");
 		}
 
 
