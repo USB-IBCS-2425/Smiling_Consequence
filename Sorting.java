@@ -8,7 +8,6 @@ public class Sorting {
             swapped = false;
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    // Swap elements
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -18,16 +17,33 @@ public class Sorting {
             if (!swapped) break;
         }
     }
+    public static int[] generateRandomArray(int length) {
+        int[] randomArray = new int[length];
+        Random random = new Random();
+
+        for (int i = 0; i < length; i++) {
+            randomArray[i] = random.nextInt(2000); 
+        }
+
+        return randomArray;
+    }
 
     public static void main(String[] args) {
-        int[] arr = {7,2,1,6,5,4,3,8,9,0};
+    	int num = 2000;
+        int[] arr = generateRandomArray(num);
         
         System.out.println("Original array:");
         System.out.println(Arrays.toString(arr));
-
+        long startTime = System.nanoTime(); 
         bubbleSort(arr);
+        long endTime = System.nanoTime(); 
+
+        long executionTime = endTime - startTime;
+
 
         System.out.println("Sorted array:");
         System.out.println(Arrays.toString(arr));
+        System.out.println("Exec time:");
+        System.out.println(executionTime);
     }
 }
